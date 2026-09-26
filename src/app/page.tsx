@@ -3,6 +3,8 @@ import FeaturedCars from '@/components/FeaturedCars';
 import Brands from '@/components/Brands';
 import { db } from '@/db';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const [allCars, brands] = await Promise.all([
     db.cars.findMany(),
