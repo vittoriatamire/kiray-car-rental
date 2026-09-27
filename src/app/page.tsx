@@ -4,6 +4,7 @@ import Brands from '@/components/Brands';
 import { db } from '@/db';
 
 export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
 
 export default async function Home() {
   const [allCars, brands] = await Promise.all([

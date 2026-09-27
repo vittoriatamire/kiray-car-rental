@@ -4,6 +4,8 @@ import { ArrowLeft, Settings2, Fuel, Users, CalendarDays, ShieldCheck, MapPin } 
 import { db } from '@/db';
 import styles from './CarDetails.module.css';
 
+export const runtime = 'edge';
+
 export default async function CarDetailsPage({
   params,
 }: {
