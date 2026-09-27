@@ -144,11 +144,128 @@
   transform: translateY(0);
 }
 
+/* ── Desktop Actions ── */
+.desktopActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── Burger Button ── */
+.burgerBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  transition: opacity 0.2s;
+}
+
+.burgerBtn:hover {
+  opacity: 0.8;
+}
+
+/* ── Mobile Menu ── */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(8, 12, 30, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease, border-top 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid transparent;
+}
+
+.mobileMenuOpen {
+  max-height: 500px;
+  padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileNavLink {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  transition: color 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobileNavLink:hover {
+  color: var(--primary-color);
+}
+
+.mobileActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobileLoginBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.mobileLoginBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileSignupBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  background: var(--primary-color);
+  box-shadow: 0 4px 14px rgba(252, 163, 17, 0.35);
+  transition: all 0.2s;
+}
+
+.mobileSignupBtn:hover {
+  background: var(--primary-hover);
+}
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .navLinks { display: none; }
+  .desktopActions { display: none; }
+  .burgerBtn { display: block; }
 }
 
 @media (max-width: 600px) {
-  .loginBtn { display: none; }
+  .navbar { padding: 16px 20px; }
+  .scrolled { padding: 12px 20px; }
 }

@@ -64,7 +64,7 @@
 
 .searchBox {
   background: white;
-  border-radius: 9999px;
+  border-radius: 24px;
   padding: 8px;
   display: flex;
   align-items: center;
@@ -76,6 +76,7 @@
 @media (min-width: 768px) {
   .searchBox {
     flex-direction: row;
+    border-radius: 9999px;
   }
 }
 
