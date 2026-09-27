@@ -45,13 +45,25 @@
   color: white;
 }
 
+@media (max-width: 600px) {
+  .content {
+    padding: 0 16px;
+  }
+}
+
 .title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 8vw, 4.5rem);
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+  .title {
+    margin-bottom: 16px;
+  }
 }
 
 .highlight {
@@ -60,6 +72,12 @@
 
 .searchContainer {
   margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .searchContainer {
+    margin-top: 24px;
+  }
 }
 
 .searchBox {
@@ -87,6 +105,12 @@
   gap: 12px;
   padding: 12px 24px;
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  .inputGroup {
+    padding: 10px 16px;
+  }
 }
 
 .icon {
